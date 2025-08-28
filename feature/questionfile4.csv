@@ -1,0 +1,41 @@
+level, questions, choices, answer
+1,Python에서 함수를 정의할 때 사용하는 키워드는?,A) func \nB) def \nC) void \nD) function, B
+1,"다음 함수의 출력 결과로 옳은 것은? 
+\ndef greeting() :
+    \nprint('hello')
+\nprint('hi')
+greeting()",A) hi hello \nB) hello hi \nC) hello hi hello \nD) hi, A
+1,매개변수가 없는 함수를 호출하는 방법으로 올바른 것은?,A) func() : \nB) def func() : \nC) def func(void): \nD) func def():,B
+1,함수에서 기본값 인자를 지정할 때 올바른 것은?,"A) def func(a=1, b) \nB) def func(a=1, b=2) \nC) def func(a, b=3,c=) \nD) def func(a=, b=2)",B
+1,클래스로 인스턴스를 만들때 자동으로 호출되는 메서드는?,A) self \nB) start \nC) init \nD) call,C
+1,parents 클래스를 상속받아 kid 클래스를 만드는 방법은?,A) class kid(parents): \nB) class parents=kid: \nC) class kid [parents] \nD) class kid:(parents),A
+1,함수에서 예외를 상위로 전달하려면?,A) return \nB) raise \nC) pass \nD) break,B
+2,함수에서 인덱스가 잘못되면 발생하는 예외는?,A) IndexError \nB) TypeError \nC) ValueError \nD) ZeroDivisionError,A
+2,올바른 예외처리 순서는?,A) try → except → else → finally \nB) try → else → except → finally \nC) except → try → finally → else \nD) try → finally → else → except,A
+2,함수에서 값을 반환할 때 사용하는 키워드는?,A) return  \nB) pass \nC) break \nD) continue,A
+2,함수 안에서 전역 변수를 수정하려면 사용하는 키워드는?,A) local \nB) global \nC) area \nD) override,B
+2,"다음 함수를 출력하는 방법으로 옳은 것은?
+\nclass greeting() :
+    \ndef hello() :
+        \nprint('hi')",A) greeting(hello()) \nB) hello() \nC) greeting()hello() \nD) greeting.hello(),D
+2,함수에 전달하는 입력값을 무엇이라고 부르는가?,A) 지역변수 \nB) 인수 \nC) 매개변수 \nD) 전역변수,B
+2,"다음 함수의 출력값으로 올바른 것은?
+\ndef greet(name=""Kim""):
+    \nprint(""Hello"", name)
+\ngreet()","A) Kim name \nB) Hello, name \nC) Hello Kim \nD) Hello,Kim",C
+2,"다음 함수를 올바르게 호출하는 것은?
+\ndef mul(a,b): 
+    \nreturn a*b","A) mul(3,4) \nB) mul(a,b = 3,4) \nC) mul=3,4 \nD) mul:(a=3,b=4)",A
+2,함수에서 자동으로 전역변수를 지역변수로 불러오는 데이터 타입은?,A) str \nB) int \nC) dict \nD) list,C
+3,예외처리에서 finally는 언제 실행되는가?,A) except가 실행된 때 \nB) 오류가 없을 때 \nC) 항상 \nD) 오류가 있을 때,C
+3,예외처리에서 except 블록이 실행되지 않는 경우는?,A) 예외 있을 때 \nB) 예외가 없을 때 \nC) finally가 있을 때 \nD) raise가 있을 때,B
+3,함수에 아무 내용이 없으면 오류가 난다. 이때 쓸 수 있는 키워드는?,A) return \nB) break \nC) exit \nD) end,A
+3,파이썬에서 예외 처리를 시작하는 키워드는?,A) try \nB) error \nC) except \nD) else,A
+3,예외를 강제로 발생시키는 키워드는?,A) else \nB) error \nC) raise \nD) except,C
+3,else 블록이 실행되기 위한 조건은?,A) 예외가 발생했을 때 \nB) 예외가 발생하지 않았을 때  \nC) finally가 실행되지 않을 때 \nD) raise가 실행될 때,B
+3,예외 클래스 중 0으로 나눌 때 발생하는 오류는?,A) ValueError \nB) IndexError \nC) ZeroDivisionError \nD) TypeError,C
+3,"int(""abc"") 실행 시 발생하는 예외는?",A) TypeError \nB) ValueError \nC) KeyError D) NameError,B
+3,"다음 함수의 실행값으로 올바른 것은?
+\ndef add(a,b=4): 
+    \nreturn a+b
+\nadd(3,5)",A) 7 \nB) 8 \nC) 12 \nD) 15, A

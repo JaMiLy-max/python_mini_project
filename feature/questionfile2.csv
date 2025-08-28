@@ -1,0 +1,27 @@
+﻿level, questions, choices, answer
+1,리스트를 만드는 올바른 방법은 무엇인가?,"A) list = (1,2,3) \nB) list = [1,2,3] \nC) list = {1,2,3} \nD) list = <1,2,3>",B
+1,튜플의 특징으로 올바른 것은?,A) 변경 가능하다 \nB) 변경 불가능하다 \nC) 키-값 쌍으로 이루어져 있다 \nD) 집합 연산이 가능하다,B
+1,set 자료형의 특징은 무엇인가?,A) 중복을 허용한다 \nB) 순서를 보장한다 \nC) 인덱스로 접근 가능하다 \nD) 중복을 허용하지 않는다,D
+1,딕셔너리에서 키와 값의 관계는 무엇인가?,A) 순서를 보장한다 \nB) 키는 중복 가능하다 \nC) 키는 유일하며 값과 매핑된다 \nD) 키와 값 모두 중복 불가하다,C
+1,리스트에서 첫 번째 원소의 인덱스는?,A) 1 \nB) 0 \nC) -1 \nD) 무작위,B
+1,리스트에서 마지막 원소를 가져오는 표현식은?,A) list[0] \nB) list[length] \nC) list[-1] \nD) list[last],C
+1,빈 딕셔너리를 만드는 방법은 무엇인가?,A) dict = {} \nB) dict = [] \nC) dict = set() \nD) dict = (),A
+1,in' 연산자의 역할은?,A) 반복문 실행 \nB) 멤버십 확인 \nC) 산술연산 \nD) 비교연산,B
+1,튜플과 리스트의 차이로 맞는 것은?,"A) 둘 다 불변 \nB) 리스트는 가변, 튜플은 불변 \nC) 둘 다 가변 \nD) 튜플은 인덱싱 불가",B
+2,리스트 메서드 중 원소를 끝에 추가하는 것은?,A) append() \nB) insert() \nC) extend() \nD) pop(),A
+2,set 자료형의 교집합 연산자는?,A) & \nB) | \nC) - \nD) ^,A
+2,딕셔너리에서 값만 가져오는 메서드는?,A) keys() \nB) values() \nC) items() \nD) get(),B
+2,딕셔너리에서 없는 키에 접근 시 발생하는 오류는?,A) IndexError \nB) KeyError \nC) ValueError \nD) NameError,B
+2,리스트에서 특정 인덱스 원소를 삭제할 때 사용하는 방법은?,A) del a[i] \nB) a.remove(i) \nC) a.pop(i) \nD) 위 모두 가능,D
+2,set에서 합집합을 계산하는 메서드는?,A) union() \nB) join() \nC) concat() \nD) add(),A
+2,"dict = {""a"":1}; dict.get(""b"",0)의 결과는?",A) 오류 \nB) None \nC) 0 \nD) 'b',C
+3,[x**2 for x in range(3)]의 결과는?,"A) [0,1,4] \nB) [1,4,9] \nC) [2,4,6] \nD) 오류",A
+3,dict.items()의 반환 형태는?,A) 리스트 \nB) 튜플 \nC) dict_items 객체 \nD) 문자열,C
+3,리스트 컴프리헨션 [x for x in range(5) if x%2==0]의 결과는?,"A) [1,3] \nB) [0,2,4] \nC) [2,4] \nD) [0,1,2]",B
+3,딕셔너리의 키로 사용할 수 없는 자료형은?,A) int \nB) str \nC) list \nD) tuple,C
+3,리스트에서 중복 제거할 때 가장 간단한 방법은?,A) list(dict.fromkeys(list)) \nB) set(list) \nC) for문 사용 \nD) 위 모두,D
+3,set 자료형에 리스트를 직접 추가하면 발생하는 오류는?,A) TypeError \nB) ValueError \nC) KeyError \nD) AttributeError,A
+3,"[i for i in range(5) if i not in [1, 3]] 리스트 컴프리헨션 결과는?","A) [1,3] \nB) [0,2,4] \nC) [0,1,2,3,4] \nD) [2,4]",B
+3,"a = {'one': 1,  'two': 2}; a.update({'three': 3}) 실행 후 a의 키 개수는?",A) 2 \nB) 3 \nC) 4 \nD) 오류,B
+3,"딕셔너리 d = {'x': [1,2], 'y':[3,4]}에서 d['x'][1]의 값은?",A) 1 \nB) 2 \nC) 3 \nD) 4,B
+3,"a = [1,2,3]; b = a; b.append(4) 이후 리스트 a의 값은?","A) [1,2,3] \nB) [1,2,3,4] \nC) [4] \nD) 오류",B
