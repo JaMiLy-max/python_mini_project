@@ -30,7 +30,12 @@ def scoring(data):
     
     else :
         # 틀리면 오답리스트에 문제 번호 추가
-        wrong_answer.append(data["numbers"])
+        wrong_answer.append({
+            "question": data["question"],
+            "answer": data["answer"],
+            "explanation": data["explanation"],
+            "correct_answer": data["correct_answer"]
+        })
 
         # 목숨이 0보다 크면 목숨 1 감소
         if life > 0 :
@@ -40,8 +45,15 @@ def scoring(data):
             # 목숨이 0이 되면 끝나는 건데 여길 어떻게 처리해야 될 지 모르겠네요. 종료 키워드랑 같이 가야 할 것 같기도
             return print('game_over')
 
-# 게임 오버 함수
-def game_over():
+# 오답노트 함수
+def show_worng_answer(wa):
+    # 리스트로 받은 오답리스트 돌면서 출력
+    for i , w in enumerate(wa,1):
+        print(f"틀린 문제 {i}번 : {w['question']}")
+        print(f"내 답: {w['answer']} / 정답: {w['correct_answer']}")
+        print(f"설명: {w['explanation']}")
+
+
 
     
 
