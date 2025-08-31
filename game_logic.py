@@ -5,7 +5,7 @@ class  GameLogic:
 
     def __init__(self):        
         self.quiz_list = [] # 출제할 문제리스트 저장
-        self.keys = ['level', 'questions', 'choices', 'answer', "comment"]
+        self.keys = ['level', 'questions', 'choices', 'answer', "explanation"]
         self.level = ("1", "2", "3")
 
         self.criteria_select = ""
@@ -113,7 +113,6 @@ class  GameLogic:
             print("\n시간 초과! 제출하지 않은값은 반영되지 않습니다.")
             return None
         else:
-            quiz["user_input"] = self.user_input # dict에 사용자 입력값 저장
+            quiz["correct_answer"] = self.user_input # dict에 사용자 입력값 저장
             return quiz
         #===========================================================================================
-
