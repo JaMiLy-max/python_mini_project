@@ -61,14 +61,33 @@ class GameDataLoading:
         try:
 
             # 네 개의 칼럼을 각각 꺼내 반환. 
-            return data['level'], data['questions'], data['choices'], data['answer']
+            return data['levels'], data['questions'], data['answer'], explanations ['explanations']
         
         except KeyError as e:
 
             # 오류가 날 때를 대비해서 언제나 error는 추가하는게 좋음
             print(f"{str(e)}가 {file_name}에 없습니다.")
-            return None, None, None, None 
+            return None, None, None, None, None 
 
 file_paths = ['questionfile1.csv', 'questionfile2.csv', 'questionfile3.csv', 'questionfile4.csv']
 loader = GameDataLoading(file_paths)
 loader.load_files()
+
+all_units_data = []
+
+for file in file_paths:
+    levels, questions, answers, explanations = loader.get_data_by_column(file)
+    
+    unit_dict = {
+        'levels': levels,
+        'questions': questions,
+        'answers': answers,
+        'answers': answers,
+        'explanations': explanations
+    }
+    
+    all_units_data.append(unit_dict)
+
+    
+
+

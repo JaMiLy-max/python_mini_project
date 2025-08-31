@@ -1,4 +1,4 @@
-﻿level, questions, choices, answer
+﻿level, questions, choices, answer, explanation
 1,파이썬에서 변수 이름으로 사용할 수 없는 것은?,A) my_var \nB) _value \nC) 2ndvalue \nD) studentName, C
 1,파이썬에서 정수형을 의미하는 데이터 타입은?,A) int \nB) float \nC) str \nD) bool, A
 1,다음 중 불리언(Boolean) 값인 것은?,A) True \nB) 'False' \nC) 0 \nD) '0', A

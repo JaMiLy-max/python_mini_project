@@ -1,4 +1,4 @@
-level, questions, choices, answer
+level, questions, choices, answer, explanation
 1,Python에서 함수를 정의할 때 사용하는 키워드는?,A) func \nB) def \nC) void \nD) function, B
 1,"다음 함수의 출력 결과로 옳은 것은? 
 \ndef greeting() :

@@ -1,4 +1,4 @@
-﻿level, questions, choices, answer
+﻿level, questions, choices, answer, explanation
 1,리스트를 만드는 올바른 방법은 무엇인가?,"A) list = (1,2,3) \nB) list = [1,2,3] \nC) list = {1,2,3} \nD) list = <1,2,3>",B
 1,튜플의 특징으로 올바른 것은?,A) 변경 가능하다 \nB) 변경 불가능하다 \nC) 키-값 쌍으로 이루어져 있다 \nD) 집합 연산이 가능하다,B
 1,set 자료형의 특징은 무엇인가?,A) 중복을 허용한다 \nB) 순서를 보장한다 \nC) 인덱스로 접근 가능하다 \nD) 중복을 허용하지 않는다,D
