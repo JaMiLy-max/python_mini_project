@@ -47,13 +47,13 @@ class GameDataLoading:
         # data_files 에서 file_name에 해당하는 데이터를 꺼내옴.
         data = self.get_data(file_name)
 
-        # 데이터가 없으면 경고 메시지를 출력하고 4개의 None 값을 반환함(각 칼럼별) 
+        # 데이터가 없으면 경고 메시지를 출력하고 5개의 None 값을 반환함(각 칼럼별) 
         if data is None: 
             print(f"{file_name}이 존재하지 않거나 로드하지 못했습니다.")
 
-            # None이 4개인 이유는 값을 4개 반환하도록 설계되어 있기 때문 
+            # None이 5개인 이유는 값을 5개 반환하도록 설계되어 있기 때문 
             # 반환 값 개수를 맞춰서 가짜 값을 반환하는게 리턴의 컨벤션. 
-            return None, None, None, None 
+            return None, None, None, None, None 
         
         # 칼럼며이 다를 수 있으므로 안전장치! 데이터에서 오는 모든 칼럼명을 모두 소문자로 처리하겠다는 뜻.
         data.columns = [col.lower() for col in data.columns]
@@ -61,7 +61,9 @@ class GameDataLoading:
         try:
 
             # 네 개의 칼럼을 각각 꺼내 반환. 
-            return data['levels'], data['questions'], data['answer'], explanations ['explanations']
+            # explanation 컬럼이 있으면 포함, 없으면 None 반환
+            explanation = data.get('explanation', None)
+            return data['level'], data['questions'], data['choices'], data['answer'], explanation
         
         except KeyError as e:
 
@@ -76,14 +78,14 @@ loader.load_files()
 all_units_data = []
 
 for file in file_paths:
-    levels, questions, answers, explanations = loader.get_data_by_column(file)
+    levels, questions, choices, answers, explanations = loader.get_data_by_column(file)
     
     unit_dict = {
-        'levels': levels,
+        'level': levels,
         'questions': questions,
-        'answers': answers,
-        'answers': answers,
-        'explanations': explanations
+        'choices': choices,
+        'answer': answers,
+        'explanation': explanations
     }
     
     all_units_data.append(unit_dict)

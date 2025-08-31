@@ -1,4 +1,4 @@
-level, questions, choices, answer, explanation
+level, questions, choices, answers, explanations
 1,파이썬에서 특정 조건에 따라 코드 블록을 실행할 때 사용하는 키워드는 무엇인가요?,A) loop \nB) when \nC) if \nD) while,C,if는 파이썬에서 조건을 검사하여 코드 실행 여부를 결정하는 조건문의 시작 키워드입니다.
 1,다음 중 0부터 4까지의 숫자를 순서대로 출력하는 for 반복문 코드는 무엇인가요?,"A) for i in range(5): print(i) \nB) for i in range(1, 5): print(i) \nC) for i from 0 to 4: print(i) \nD) for i in list(5): print(i)",A,"range(n) 함수는 0부터 n-1까지의 정수를 생성하므로, range(5)는 0, 1, 2, 3, 4를 생성합니다."
 1,"다음 while 반복문은 몇 번 ""반복""을 출력하나요?\ncount = 0\nwhile count < 2:\n\tprint(""반복"")\n\tcount += 1",A) 0번 \nB) 1번 \nC) 2번 \nD) 3번,C,"count가 0일 때, 1일 때 count < 2 조건이 참이 되어 총 두 번 ""반복""을 출력합니다. count가 2가 되면 조건이 거짓이 되어 반복문이 종료됩니다."
