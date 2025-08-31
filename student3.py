@@ -1,4 +1,4 @@
-'''
+
 # input 데이터
 input_data = {
         "numbers" : 1,
@@ -9,13 +9,13 @@ input_data = {
         "explanation": "if는 파이썬에서 조건을 검사하여 코드 실행 여부를 결정하는 조건문의 시작 키워드입니다.",
         "correct_answer" : "c"
     }
-'''
 
-''' 전역변수에 필요한 데이터
+
+# 전역변수에 필요한 데이터
 life = 5
 score = 0
 wrong_answer = []
-'''
+
 
 # 점수체크 함수
 def scoring(data):
@@ -30,7 +30,7 @@ def scoring(data):
         return True
     
     else :
-        # 틀리면 오답리스트에 문제 번호 추가
+        # 틀리면 오답리스트
         wrong_answer.append({
             "question": data["question"],
             "answer": data["answer"],
@@ -47,7 +47,7 @@ def scoring(data):
             # 목숨이 0이 되면 끝나는 건데 여길 어떻게 처리해야 될 지 모르겠네요. 종료 키워드랑 같이 가야 할 것 같기도
             return False
 
-# 오답노트 함수
+# 오답노트 함수 
 def show_wrong_answer(wa):
     # 리스트로 받은 오답리스트 돌면서 출력
     for i , w in enumerate(wa,1):
@@ -55,6 +55,10 @@ def show_wrong_answer(wa):
         print(f"내 답: {w['answer']} / 정답: {w['correct_answer']}")
         print(f"설명: {w['explanation']}")
 
+def show_left_life(ll):
+        print('* ' * ll)
+
+show_left_life(life)
 
 
     
