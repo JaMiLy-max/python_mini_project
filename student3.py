@@ -27,6 +27,7 @@ def scoring(data):
         # 맞으면 점수 1점 상승
         score += 1
         # print(f'현재 점수는 {score}점 입니다.')
+        return True
     
     else :
         # 틀리면 오답리스트에 문제 번호 추가
@@ -40,13 +41,14 @@ def scoring(data):
         # 목숨이 0보다 크면 목숨 1 감소
         if life > 0 :
             life -= 1
+            return True
             # print(f'남은 목숨은 {life}개 입니다.')
         else :
             # 목숨이 0이 되면 끝나는 건데 여길 어떻게 처리해야 될 지 모르겠네요. 종료 키워드랑 같이 가야 할 것 같기도
-            return print('game_over')
+            return False
 
 # 오답노트 함수
-def show_worng_answer(wa):
+def show_wrong_answer(wa):
     # 리스트로 받은 오답리스트 돌면서 출력
     for i , w in enumerate(wa,1):
         print(f"틀린 문제 {i}번 : {w['question']}")
