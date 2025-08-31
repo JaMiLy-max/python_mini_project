@@ -38,7 +38,6 @@ class  GameLogic:
         @return: 출제할 문제를 반환합니다. 
         '''
         self.quiz_list = quiz_list
-
         # 정답을 입력과 순서성을 가져야함으로 list구조 유지.
         if self.criteria_select in ("전체", "단원별"): 
             self.quiz_list = GameLogic.shuffle_numbering(quiz_list)  # 셔플 맟 순서값 부여
@@ -76,6 +75,8 @@ class  GameLogic:
         '''
         주어진 문제 list를 섞고 순서를 메깁니다.
         '''
+        print("셔플", len(shuffle_list), shuffle_list[0])
+
         shuffle(shuffle_list)
         return [{'numbers':i, **sublist} for i, sublist in enumerate(shuffle_list, start=1)]   # numbers key add
     
@@ -90,13 +91,17 @@ class  GameLogic:
         '''
         timeout = 120
         self.user_input = None
+        
+        print(type(self.quiz_list))
+        print(len(self.quiz_list))
+
         quiz = self.quiz_list[number]
         #===========================================================================================
         def get_input_thread():
             try:
                 # 사용자에게 입력을 기다립니다.
                 print(f"  🎯 문제당 제한시간은 {timeout//60}분입니다 🎯")
-                self.user_input = input(f'{quiz["numbers"]}. {quiz["questions"]}\n{quiz["choices"]}\n')
+                self.user_input = input(f'{quiz["numbers"]}. {quiz["questions"]}\n{quiz["choices"]}\n\n')
             except EOFError:
                 self.user_input = None
     
