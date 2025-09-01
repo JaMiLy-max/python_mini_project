@@ -103,7 +103,8 @@ class  GameLogic:
             try:
                 # 사용자에게 입력을 기다립니다.
                 print(f"  🎯 문제당 제한시간은 {timeout//60}분입니다 🎯")
-                self.user_input = input(f'{quiz["numbers"]}. {quiz["questions"]}\n{quiz["choices"]}\n\n')
+                print(f'{quiz["numbers"]}. {quiz["questions"]}\n{quiz["choices"]}'.replace("\\n","\n"))
+                self.user_input = input()
             except EOFError:
                 self.user_input = None
     

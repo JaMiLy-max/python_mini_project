@@ -65,10 +65,10 @@ class  Student:
     def show_wrong_answer(self):
         # 리스트로 받은 오답리스트 돌면서 출력
         for i , w in enumerate(self.wrong_answer,1):
-            print(f"틀린 문제 {w['numbers']}번 : {w['questions']}")
-            print(f"보 기: \n{w['choices']}")
-            print(f"내 답: {w['answers']} / 정답: {w['correct_answer']}")
-            print(f"설명: {w['explanations']}")
+            print(f"틀린 문제 {w['numbers']}번 : {w['questions']}".replace("\\n","\n"))
+            print(f"보 기: \n{w['choices']}".replace("\\n","\n"))
+            print(f"내 답: {w['answers']} / 정답: {w['correct_answer']}".replace("\\n","\n"))
+            print(f"설명: {w['explanations']}".replace("\\n","\n"))
             print()
 
     def show_left_life(self):
