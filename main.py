@@ -12,11 +12,10 @@ students = {
 }
 
 # 1. 문제유형 질문
-criteria = students[3].game_settting()
-students[3].criteria_select = criteria
+unit_select = students[3].game_settting()
 
 # 2. 그에 맞는 파일 가져오기
-questions = students[1].get_all_questions()  # 이게 실제 문제 리스트
+questions = students[1].get_all_questions(unit_select)  # 이게 실제 문제 리스트
 # all_data = students[1].get_all_data()        # 파일별 그룹화된 데이터 (사용하지 않음)
 # processed = students[1].get_all_processed()
 

@@ -7,6 +7,7 @@ class  GameLogic:
         self.quiz_list = [] # 출제할 문제리스트 저장
         self.keys = ['level', 'questions', 'choices', 'answer', "explanation"]
         self.level = ("1", "2", "3")
+        self.units = ("1", "2", "3", "4")
 
         self.criteria_select = ""
         self.level_select = ""
@@ -28,8 +29,15 @@ class  GameLogic:
         criteria_select = input("🕹️문제 유형을 선택해주세요!(전체, 레벨별, 단원별)").strip()
         # =======================================================================
         
-        criteria_select = GameLogic.exact_value(criteria_select, criteria, "'전체', '레벨별', '단원별'")    # 입력값 검증.
-        return criteria_select
+        self.criteria_select = GameLogic.exact_value(criteria_select, criteria, "'전체', '레벨별', '단원별'")    # 입력값 검증.
+        
+        unit_select:str = "0"
+        if self.criteria_select == "단원별":
+            # unit_select = input("⍰ 단원은 4개로 구성되어 있습니다. 원하시는 단윈의 숫자를 입력해주세요. (1, 2, 3, 4) ⍰").strip() # 입력값
+            unit_select = GameLogic.exact_value(input("⍰ 단원은 4개로 구성되어 있습니다. 원하시는 단윈의 숫자를 입력해주세요. (1, 2, 3, 4) ⍰").strip()
+                                                , self.units, "1, 2, 3, 4") # 검증
+
+        return unit_select
     
 
     def questions_criteria(self, quiz_list):
@@ -89,10 +97,6 @@ class  GameLogic:
         '''
         timeout = 120
         self.user_input = None
-        
-        print(type(self.quiz_list))
-        print(len(self.quiz_list))
-
         quiz = self.quiz_list[number]
         #===========================================================================================
         def get_input_thread():
