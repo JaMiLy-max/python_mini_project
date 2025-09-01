@@ -1,7 +1,6 @@
-import student3
 from feature.Data_Loader import GameDataLoading
 from game_logic import GameLogic
-from uimanager import Student
+from ui_manager import Student
 
 # def main():
 
