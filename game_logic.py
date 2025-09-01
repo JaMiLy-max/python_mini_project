@@ -25,7 +25,7 @@ class  GameLogic:
         "\n\t3. 조건문과 반복문" \
         "\n\t4. 함수와 예외처리")
         criteria = ("레벨별", "단원별", "전체")
-        criteria_select = input("🕹️문제 유형을 선택해주세요!(전체, 레벨별, 단원별)")  
+        criteria_select = input("🕹️문제 유형을 선택해주세요!(전체, 레벨별, 단원별)").strip()
         # =======================================================================
         
         criteria_select = GameLogic.exact_value(criteria_select, criteria, "'전체', '레벨별', '단원별'")    # 입력값 검증.
@@ -45,10 +45,10 @@ class  GameLogic:
         
         elif self.criteria_select == "레벨별": 
             level_index = self.keys.index("level")
-            leval_select = input("⍰ 레벨은 3단계로 이루어져 있습니다. 원하시는 레벨을 입력해주세요. (1, 2, 3) ⍰") # 입력값
+            leval_select = input("⍰ 레벨은 3단계로 이루어져 있습니다. 원하시는 레벨을 입력해주세요. (1, 2, 3) ⍰").strip() # 입력값
             self.leval_select = GameLogic.exact_value(leval_select, self.level, "1, 2, 3") # 검증
 
-            level_list = [item for item in self.quiz_list if int(item.get("level")) == self.leval_select] # 선택값 list
+            level_list = [item for item in self.quiz_list if str(item.get("level")) == self.leval_select] # 선택값 list
             self.quiz_list = GameLogic.shuffle_numbering(level_list)  # 셔플 맟 순서값 부여
             return self.quiz_list
 
@@ -64,7 +64,7 @@ class  GameLogic:
              while True:
                 # 올바른 입력을 받을 때까지 반복합니다. 
                 print("⚠️ 잘못된 유형입니다. ",messages,"중 하나를 입력하세요.")
-                select_values = input("🕹️다시 입력해주세요: ")
+                select_values = input("🕹️다시 입력해주세요: ").strip()
                 if select_values in exact_list:
                     return select_values
         else :
@@ -75,8 +75,6 @@ class  GameLogic:
         '''
         주어진 문제 list를 섞고 순서를 메깁니다.
         '''
-        print("셔플", len(shuffle_list), shuffle_list[0])
-
         shuffle(shuffle_list)
         return [{'numbers':i, **sublist} for i, sublist in enumerate(shuffle_list, start=1)]   # numbers key add
     
@@ -118,6 +116,6 @@ class  GameLogic:
             print("\n시간 초과! 제출하지 않은값은 반영되지 않습니다.")
             return None
         else:
-            quiz["correct_answer"] = self.user_input # dict에 사용자 입력값 저장
+            quiz["correct_answer"] = self.user_input.strip() # dict에 사용자 입력값 저장
             return quiz
         #===========================================================================================
