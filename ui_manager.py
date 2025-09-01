@@ -32,7 +32,7 @@ class  Student:
         '''
 
         # 정답 체크 대소문자가 다를수도 있어서 대문자로 올리고 비교
-        if data["answers"].upper() == data["correct_answer"].upper() :
+        if data["answers"].upper().strip() == data["correct_answer"].upper() :
             # 맞으면 점수 1점 상승
             self.score += 1
             # print(f'현재 점수는 {score}점 입니다.')
@@ -57,7 +57,8 @@ class  Student:
                 print('='*100)
                 print('='*100)
                 print('='*100)
-                
+
+            if self.life == 0:
                 self.show_wrong_answer()
                 sys.exit()
 
