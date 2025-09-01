@@ -104,6 +104,11 @@ cd [프로젝트 폴더명 : python_mini_project]  # 클론된 레포지토리 �
   python3 main.py  
 ```
 3. **지시에 따라 문제 풀이 진행**
+<img width="500" height="443" alt="스크린샷 2025-09-01 오후 2 55 09" src="https://github.com/user-attachments/assets/6ecdb88e-ec1d-436f-af21-4a9bcc08e1ab" />
+<img width="500" height="417" alt="스크린샷 2025-09-01 오후 2 55 18" src="https://github.com/user-attachments/assets/0a701d93-c66e-4001-abaf-049832c0c74b" />
+
+
+
 
 ## ⚠️ 예외 처리 및 고려사항
 * 
