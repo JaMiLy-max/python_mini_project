@@ -26,9 +26,18 @@ number = 0
 while len(students[3].quiz_list) > number :
     # 문제와 정답을 return 받습니다.
     quiz_dict = students[3].show_quiz_input(number)
+    if students[3].user_input.strip() == "종료":
+        students[2].life = 0
+        students[2].show_left_life()
+        print('='*100)
+        print('='*100)
+        print('='*100)
+        students[2].show_wrong_answer()
+        break
+    else:
+        students[2].show_left_life()
+        students[2].scoring(quiz_dict)
 
     # 문제를 체점합니다 (종료를 입력받으면 결과 return)
-    students[2].show_left_life()
-    students[2].scoring(quiz_dict)
 
     number += 1
