@@ -53,12 +53,10 @@ class  Student:
             if self.life > 0 :
                 self.life -= 1
                 # print(f'남은 목숨은 {life}개 입니다.')
-            else :
+            else:
                 print('='*100)
                 print('='*100)
                 print('='*100)
-
-            if self.life == 0:
                 self.show_wrong_answer()
                 sys.exit()
 
